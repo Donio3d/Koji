@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="297.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+
+   <children>
+      <AnchorPane fx:id="topBar" prefHeight="64.0" prefWidth="297.0" style="-fx-background-color: a0522d;">
+         <children>
+            <ImageView fx:id="menuHotSeat" fitHeight="51.0" fitWidth="51.0" layoutX="14.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../../../Downloads/office-chair.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="menuOnline" fitHeight="51.0" fitWidth="51.0" layoutX="123.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../../../Downloads/online-game.png" />
+               </image>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="232.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/Question.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="hotSeat" layoutY="74.0" prefHeight="360.0" prefWidth="297.0" style="-fx-background-color: a0522d;">
+         <children>
+            <Label layoutX="63.0" layoutY="27.0" text="Player 1:" visible="false" />
+            <TextField fx:id="playerName" layoutX="63.0" layoutY="42.0" prefHeight="25.0" prefWidth="194.0" promptText="Player 1 name" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="79.0" text="Player 2:" visible="false" />
+            <TextField fx:id="player2Name" layoutX="63.0" layoutY="97.0" prefHeight="25.0" prefWidth="194.0" promptText="Player 2 name" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="132.0" text="Rows:" visible="false" />
+            <TextField fx:id="rowsNumber" layoutX="63.0" layoutY="151.0" prefHeight="25.0" prefWidth="194.0" promptText="How Much Rows" />
+            <TextField fx:id="colsNumber" layoutX="63.0" layoutY="207.0" prefHeight="25.0" prefWidth="194.0" promptText="How Much Cols" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/row.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../../../../Downloads/row.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="192.0" text="Cols:" visible="false" />
+            <Button fx:id="startGame" layoutX="85.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #708090; -fx-border-radius: 360,360,360; -fx-border-style: none;" text="Start Game" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="online" layoutY="74.0" prefHeight="297.0" prefWidth="297.0" style="-fx-background-color: a0522d;" visible="false">
+         <children>
+            <Label layoutX="63.0" layoutY="27.0" prefHeight="15.0" prefWidth="194.0" style="-fx-alignment: center;" text="Your name:" textAlignment="CENTER" visible="false" />
+            <TextField fx:id="mPlayerName" layoutX="63.0" layoutY="42.0" prefHeight="25.0" prefWidth="194.0" promptText="Your nickname" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="74.0" text="I want To be a server" />
+            <Slider blockIncrement="0.0" layoutX="211.0" layoutY="68.0" majorTickUnit="1.0" max="2.0" min="1.0" minorTickCount="0" prefHeight="26.0" prefWidth="39.0" snapToTicks="true" value="2.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Slider>
+            <Label layoutX="257.0" layoutY="74.0" text="ON" />
+            <AnchorPane fx:id="server" layoutY="94.0" prefHeight="266.0" prefWidth="297.0">
+               <children>
+                  <Label layoutX="63.0" layoutY="14.0" text="IP address:" visible="false" />
+                  <TextField editable="false" layoutX="63.0" layoutY="29.0" prefHeight="25.0" prefWidth="194.0" text="10.10.10.10" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="60.0" text="Password:" visible="false" />
+                  <PasswordField layoutX="63.0" layoutY="75.0" prefHeight="25.0" prefWidth="194.0" promptText="Password" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/padlock.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="103.0" text="Rows:" visible="false" />
+                  <TextField layoutX="63.0" layoutY="121.0" prefHeight="25.0" prefWidth="194.0" promptText="How Much Rows" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/row.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="69.0" layoutY="162.0" text="Cols:" visible="false" />
+                  <TextField layoutX="63.0" layoutY="177.0" prefHeight="25.0" prefWidth="194.0" promptText="How Much Cols" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                     <image>
+                        <Image url="@../../../../Downloads/row.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="85.0" layoutY="228.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #708090; -fx-border-radius: 360,360,360; -fx-border-style: none;" text="Start Game" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="client" layoutY="94.0" prefHeight="266.0" prefWidth="297.0" visible="false">
+               <children>
+                  <Label layoutX="63.0" layoutY="14.0" text="IP address:" visible="false" />
+                  <TextField fx:id="ipAddress" layoutX="63.0" layoutY="29.0" prefHeight="25.0" prefWidth="194.0" promptText="IP Address" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="60.0" text="Password:" visible="false" />
+                  <PasswordField fx:id="password" layoutX="63.0" layoutY="75.0" prefHeight="25.0" prefWidth="194.0" promptText="Password" />
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="21.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/padlock.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="85.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #708090; -fx-border-radius: 360,360,360; -fx-border-style: none;" text="Connect">
+                     <effect>
+                        <ColorAdjust hue="-1.0" />
+                     </effect></Button>
+                  <ProgressIndicator layoutX="95.0" layoutY="143.0" prefHeight="109.0" prefWidth="107.0">
+                     <effect>
+                        <ColorAdjust contrast="1.0" hue="-0.74" />
+                     </effect>
+                  </ProgressIndicator>
+                  <Label layoutX="108.0" layoutY="191.0" text="CONNECTING" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
